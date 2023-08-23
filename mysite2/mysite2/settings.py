@@ -28,6 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+#login url ='/accounts/login/'
+LOGIN_REDIRECT_URL="/"
 
 # Application definition
 
@@ -40,6 +45,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "bookmark.apps.BookmarkConfig", #추가 bookmark
     "blog.apps.BlogConfig",# 추가 blog(2023-08-07)
+    "widget_tweaks",#추가 (2023-08-22)
+
 ]
 
 MIDDLEWARE = [

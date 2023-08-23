@@ -32,5 +32,7 @@ urlpatterns = [
     path('blog/',include('blog.urls')),
 
     #첫페이지 만들기
-    path("",HomeView.as_view(),name='home')
+    path("",HomeView.as_view(),name='home'),
+    # 로그인
+    path("accounts/",include("django.contrib.auth.urls")),
 ]

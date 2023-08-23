@@ -42,11 +42,26 @@
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+                <div style="text-align:right">
+                {% if user.is_active %}
+                <div> 
+                  로그인 ID : {{ user }} / {{user.get_short_name}}
+                  <br>
+                  <a href="/accounts/logout">로그아웃</a>
+                </div>
+                {% else %}
+                <div>
+                  <a href="/accounts/login">로그인</a>
+                </div>
+                {% endif %}
+              </div>
               </div>
             </div>
           </nav>
         <div class="container bg-warning">
             <h4>This is CONTENT area.</h4>
+            
+
         </div>
 
         <footer class='fixed-bottom bg-info'>
